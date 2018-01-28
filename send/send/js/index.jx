@@ -1,0 +1,34 @@
+
+$(document).ready(function() {
+  $('button').click(function(){
+    if ($('#new').val().length > 0 && $('#new').val() != 'New task') {
+      var newTask = '<li  class="list-group-item animated slideInDown">';
+      newTask += $('#new').val() + '</li>';
+      $('.list-group').append(newTask);
+      $('#new').val('New task');
+    } else {
+      $('#new').val('New task');
+     
+    }
+  
+  }); // end button click
+  
+  $('#new').click(function(){
+    $(this).val('');  
+  }); // end input click
+  
+  // mark notes as done .
+  $('ul').on('click', 'li' ,function(){
+	  $(this).toggleClass('done');
+  })
+});
+
+// delete
+$('ul').on('click', '#delete', function() {
+  $(this).remove();
+});
+
+// show/hide the input.
+$('.mdl-checkbox__input').click(function(){
+	$('input').fadeToggle();
+});

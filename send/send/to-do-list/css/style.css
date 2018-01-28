@@ -1,0 +1,103 @@
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+body {
+  background-image: url("Sample.png");
+	background-size: cover;
+  width: 40%;
+  margin: 0 auto;
+  height: 100vh;
+  font-family: 'Quicksand', sans-serif;
+
+}
+
+#toDoList {
+  background-color: #21a57d;
+  width: 30em;
+  height: 30em;
+  border-radius: 5%;
+
+  
+}
+
+#new {
+  width: 95%;
+  padding: .9em;
+  border: none;
+  border-radius: 15px;
+  margin-bottom: 2em;
+}
+
+#newTaskElement {
+  position: relative;
+}
+
+.btn {
+  padding: .7em;
+  right: 24px;
+  top: 15px;
+  position: absolute;
+  z-index: 9999999;
+  background-color: forestgreen;
+}
+
+.btn-circle {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 1.75rem;
+  border-radius: 50px;
+}
+
+.list-group {
+  width: 95%;
+}
+
+.animated{
+  margin-bottom: 0.5%;
+  height: 1%;
+  border-radius: 15px;
+}
+
+li span{
+	background: #e74c3c;
+	height: 40px;
+	margin-right: 20px;
+	color: white;
+	width: 0;
+	display: inline-block;
+	opacity: 0;
+	transition: 0.2s linear;
+}
+
+li:hover span{
+  width: 40px;
+	opacity: 1.0;
+}
+
+.done {
+  text-decoration: line-through;
+  color: gray;
+}
+
+#toDoTitle {
+  color: rgb(35, 104, 136);
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin-bottom: -1px;
+}
+
+#sample3 {
+  color: rgb(35, 104, 136);
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  body {
+    width: 80%;
+  }
+}
